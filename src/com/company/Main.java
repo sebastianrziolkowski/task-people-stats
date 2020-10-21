@@ -9,7 +9,10 @@ import java.util.stream.Collectors;
 class Main {
     public static void main(String[] args) {
         System.out.println("Hello world");
+        PeopleStats peopleStats = new PeopleStats(null);
+        peopleStats.count();
     }
+
 }
 
 class PeopleStats {
@@ -24,6 +27,9 @@ class PeopleStats {
         } catch (IOException e) {
             throw new IllegalStateException(e);
         }
+    }
+    public long count() {
+        return people.size();
     }
 }
 
